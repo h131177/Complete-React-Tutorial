@@ -7,12 +7,12 @@ const Home = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch('http://localhost:8000/blogs')
+            fetch('http://localhost:8000/blogss')
                 .then(res => {
-                    console.log(res);
-                    // if(res.ok) { remember to reconnect json-server to get the data
-
-                    // }
+                    if(!res.ok) {
+                        throw Error('Could not fetch the data for that resoure');
+                        // Endpoint doesnt exist or the request is denied
+                    }
                     return res.json();
                 })
                 .then(data => {
