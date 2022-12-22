@@ -9,6 +9,10 @@ const Home = () => {
         setTimeout(() => {
             fetch('http://localhost:8000/blogs')
                 .then(res => {
+                    console.log(res);
+                    // if(res.ok) { remember to reconnect json-server to get the data
+
+                    // }
                     return res.json();
                 })
                 .then(data => {
