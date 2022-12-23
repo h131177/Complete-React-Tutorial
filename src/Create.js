@@ -21,7 +21,7 @@ const handleSubmit = (e) => {
     }).then(() => {
         console.log('new blog added');
         setIsPending(false);
-        history.go(-1); //Go back one step
+        history.push('/');
     })
 }
 
